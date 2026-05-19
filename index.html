@@ -2122,9 +2122,6 @@ function renderTask(t, i = 0) {
     const overdue = t.deadline < todayStr() && !t.completed ? 'overdue' : '';
     metas.push(`<span class="meta-chip deadline ${overdue}">${ICONS.flag} ${formatDate(t.deadline)}</span>`);
   }
-  if (t.notes) {
-    metas.push(`<span class="meta-chip" style="color:var(--text-faint)">≣</span>`);
-  }
   if (t.repeat) {
     metas.push(`<span class="meta-chip" style="color:var(--accent-upcoming)" title="Repeats ${repeatShortLabel(t.repeat)}">↻ ${repeatShortLabel(t.repeat)}</span>`);
   }
